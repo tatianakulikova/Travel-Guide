@@ -1,0 +1,2236 @@
+{
+  "intents": [
+    {
+      "intent": "visit",
+      "examples": [
+        {
+          "text": "podívat se"
+        },
+        {
+          "text": "navštívit"
+        },
+        {
+          "text": "prohlédnout"
+        },
+        {
+          "text": "na výlet"
+        }
+      ],
+      "description": "visit concrete place"
+    },
+    {
+      "intent": "get",
+      "examples": [
+        {
+          "text": "naplánovat cestu"
+        },
+        {
+          "text": "jak se tam můzu dostat"
+        },
+        {
+          "text": "dostat"
+        },
+        {
+          "text": "dostanu"
+        },
+        {
+          "text": "jak se tam dostanu"
+        },
+        {
+          "text": "dojet"
+        },
+        {
+          "text": "cesta"
+        },
+        {
+          "text": "ukaž cestu"
+        },
+        {
+          "text": "naplánovat trasu"
+        }
+      ],
+      "description": "get information about route"
+    },
+    {
+      "intent": "thank",
+      "examples": [
+        {
+          "text": "děkuji"
+        },
+        {
+          "text": "díky"
+        },
+        {
+          "text": "děkuju"
+        },
+        {
+          "text": "děkuji moc"
+        },
+        {
+          "text": "dík"
+        }
+      ],
+      "description": "thank chatbot"
+    },
+    {
+      "intent": "ending",
+      "examples": [
+        {
+          "text": "čau"
+        },
+        {
+          "text": "nashle"
+        },
+        {
+          "text": "čus"
+        },
+        {
+          "text": "nashledanou"
+        },
+        {
+          "text": "na shledanou"
+        }
+      ],
+      "description": "ending a dialog"
+    },
+    {
+      "intent": "info",
+      "examples": [
+        {
+          "text": "co umíš"
+        },
+        {
+          "text": "s čím můžeš pomoct"
+        },
+        {
+          "text": "s čím dokážeš poradit"
+        },
+        {
+          "text": "co můžeš"
+        }
+      ],
+      "description": "info about chatbot skills"
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "zdravím"
+        },
+        {
+          "text": "dobré ráno"
+        },
+        {
+          "text": "nazdar"
+        },
+        {
+          "text": "dobrý večer"
+        },
+        {
+          "text": "ahoj"
+        },
+        {
+          "text": "dobrý den"
+        }
+      ],
+      "description": "greeting chatbot"
+    },
+    {
+      "intent": "find",
+      "examples": [
+        {
+          "text": "najít"
+        },
+        {
+          "text": "zajít"
+        }
+      ],
+      "description": "find something around concrete place"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "info",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "webPage",
+          "synonyms": [
+            "stránka",
+            "web",
+            "webová stránka",
+            "internetová stránka",
+            "webovou stránku",
+            "internetovou stránku",
+            "stránku"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "workingHours",
+          "synonyms": [
+            "otevírací doba",
+            "otevřeno",
+            "pracuje",
+            "otevřena",
+            "otevřen",
+            "pracovní doba",
+            "otevírací hodiny"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "address",
+          "synonyms": [
+            "adresa",
+            "se nachází",
+            "adresu",
+            "poloha",
+            "polohu"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "email",
+          "synonyms": [
+            "mail",
+            "email",
+            "emailová schránka"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "phone",
+          "synonyms": [
+            "kontakt",
+            "mobil",
+            "telefon",
+            "číslo",
+            "zavolat"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sourcePlace",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "odkud",
+          "patterns": [
+            "(Z|z|Ze|ze)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){1,3}"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "tripAnswer",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "ano",
+          "patterns": [
+            "Jo"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "ne",
+          "patterns": [
+            "Ne"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "category",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "Památky a muzea",
+          "patterns": [
+            "Památky a muzea"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "Zábava",
+          "patterns": [
+            "Zábava"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "Jídlo a pití",
+          "patterns": [
+            "Jídlo a pití"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "Ubytování",
+          "patterns": [
+            "Ubytování"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "fine",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ok",
+          "synonyms": [
+            "ok",
+            "dobře",
+            "fajn"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "tripType",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "PUBLIC_TRANSPORT",
+          "synonyms": [
+            "mhd",
+            "hromadná veřejná doprava",
+            "veřejná doprava",
+            "vlakem",
+            "busem",
+            "autobusem",
+            "tramvají",
+            "hromadná doprava",
+            "hromadnou",
+            "veřejnou",
+            "dopravou"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "CAR",
+          "synonyms": [
+            "autem",
+            "soukromým autem",
+            "auto"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "feedbackAnswer",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "ne",
+          "patterns": [
+            "Nemám čas"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "ano",
+          "patterns": [
+            "Jo, klidně"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "TripView",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "oboje",
+          "synonyms": [
+            "oboje",
+            "oba",
+            "to a to"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "popis",
+          "synonyms": [
+            "detailní slovní popis",
+            "popis",
+            "slovně",
+            "slovy",
+            "text",
+            "textem"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "mapa",
+          "synonyms": [
+            "mapa",
+            "na mapě"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "interestingPlaceAnswer",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "ano",
+          "patterns": [
+            "Určitě to chci"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "ne",
+          "patterns": [
+            "Nemám o to zájem"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "feedback",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "text",
+          "patterns": [
+            "(ZV: )([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ.,!?)(: ]{1,})"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-zA-Z.-_]*@[a-zA-z.]*"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "place",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "dívadlo",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(dívadlo|divadlo|Dívadlo|Divadlo)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "katedrála",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(katedrálu|katedralu|Katedrálu|Katedralu)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "kolonáda",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(kolonádu|kolonadu|Kolonádu|Kolonadu)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "most",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(most|Most)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "dům",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(dům|dum|Dům|Dum)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "hrad",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(hrad|Hrad)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "muzeum",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(muzeum|Muzeum)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "třída",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(třídu|tridu|Třídu|Tridu)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "kaple",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(kapli|Kapli)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "klášter",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(klášter|klaster|Klášter|Klaster)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "chrám",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(chrám|chram|Chrám|Chram)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "zámek",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(zámek|zamek|Zámek|Zamek)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "synagoga",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(synagogu|Synagogu)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "radnice",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(radnici|Radnici)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "palác",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(palác|palac|Palác|Palac)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "náměstí",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(náměstí|namesti|Náměstí|Namesti)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "kostel",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(kostel|Kostel)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "církev",
+          "patterns": [
+            "([a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,} ){0,3}(církev|cirkev|Církev|Cirkev)( [a-zA-ZáÁčČďĎéÉěĚíÍňŇóÓřŘšŠťŤúÚůŮýÝžŽ]{1,}){0,3}"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "endConversation",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "ne",
+          "patterns": [
+            "Ne, nemám nic dalšího"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "ano",
+          "patterns": [
+            "Ano"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://travel-guide-backend.eu-gb.cf.appdomain.cloud/chatbot/api/",
+      "name": "main_webhook",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json;charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Informace o místě",
+      "parent": "node_3_1590100582562",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1588080733738"
+      },
+      "conditions": "@info",
+      "dialog_node": "node_8_1587399198728",
+      "previous_sibling": "node_5_1586098728604"
+    },
+    {
+      "type": "standard",
+      "title": "Navštívit místo",
+      "parent": "node_3_1590100582562",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "placeName": "<? @place.literal ?>",
+            "requestType": "PLACE_API"
+          },
+          "result_variable": "placeResponse"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@place",
+      "dialog_node": "node_5_1586098728604"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Bohužel, nepodařilo se mi nic najít. Vyberte, prosím, jinou kategorii."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1588145285183",
+      "conditions": "anything_else",
+      "dialog_node": "response_4_1588145733330",
+      "previous_sibling": "response_10_1588145733074"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Našel jsem toto:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "$categoryResponse.response"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1588145285183",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1590101896967"
+      },
+      "conditions": "$categoryResponse != null && $categoryResponse.response != null",
+      "dialog_node": "response_10_1588145733074"
+    },
+    {
+      "type": "standard",
+      "title": "Něco dalšího",
+      "output": {
+        "generic": [
+          {
+            "title": "Můžu Vám pomoct s něčím dalším?",
+            "options": [
+              {
+                "label": "Ne, nemám nic dalšího",
+                "value": {
+                  "input": {
+                    "text": "Ne, nemám nic dalšího"
+                  }
+                }
+              },
+              {
+                "label": "Ano",
+                "value": {
+                  "input": {
+                    "text": "Ano"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1590100027353",
+      "dialog_node": "node_6_1590167384738",
+      "previous_sibling": "node_4_1588184270128"
+    },
+    {
+      "type": "standard",
+      "title": "Rozloučení",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Na shledanou, budu na Vás tady čekat."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1590100027353",
+      "conditions": "#ending",
+      "dialog_node": "node_4_1588184270128",
+      "previous_sibling": "node_2_1588183869959"
+    },
+    {
+      "type": "standard",
+      "title": "Děkování",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_2_1590100027353",
+      "conditions": "#thank",
+      "dialog_node": "node_2_1588183869959",
+      "previous_sibling": "node_1_1588192944343"
+    },
+    {
+      "type": "standard",
+      "title": "Ukončení konverzace",
+      "parent": "node_2_1590100027353",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@endConversation",
+      "dialog_node": "node_1_1588192944343",
+      "previous_sibling": "node_2_1588193329499"
+    },
+    {
+      "type": "standard",
+      "title": "Dobře",
+      "parent": "node_2_1590100027353",
+      "conditions": "@fine",
+      "dialog_node": "node_2_1588193329499"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $routeResponse.instructions ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "<? $routeResponse.routePicture ?>",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "<? $routeResponse.routeLink ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1587500220498",
+      "conditions": "@TripView:oboje",
+      "dialog_node": "response_5_1587504666663",
+      "previous_sibling": "response_2_1587504601321"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $routeResponse.instructions ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1587500220498",
+      "conditions": "@TripView:popis",
+      "dialog_node": "response_3_1587500289462",
+      "previous_sibling": "node_2_1588144186786"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "source": "<? $routeResponse.routePicture ?>",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "<? $routeResponse.routeLink ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1587500220498",
+      "conditions": "@TripView:mapa",
+      "dialog_node": "response_2_1587504601321",
+      "previous_sibling": "response_3_1587500289462"
+    },
+    {
+      "type": "standard",
+      "title": "Najít zajímavosti v okolí",
+      "output": {
+        "generic": [
+          {
+            "title": "Chcete, abych zkusil najít něco zajímavého v okolí?",
+            "options": [
+              {
+                "label": "Určitě to chci",
+                "value": {
+                  "input": {
+                    "text": "Určitě to chci"
+                  }
+                }
+              },
+              {
+                "label": "Nemám o to zájem",
+                "value": {
+                  "input": {
+                    "text": "Nemám o to zájem"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1587500220498",
+      "dialog_node": "node_2_1588144186786"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Cesta bude trvat kolem <? $routeResponse.totalTime ?>. Zaplatíte celkem <? $routeResponse.fare ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1586098875350",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1587498024774"
+      },
+      "conditions": "$routeResponse.totalTime != null && $routeResponse.fare != null",
+      "dialog_node": "response_10_1587916201935",
+      "previous_sibling": "response_4_1587916043905"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Bohužel, nepodařilo se mi naplánovat trasu. Zkusíme to ještě jednou."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1586098875350",
+      "context": {
+        "tripType": null,
+        "sourcePlace": null
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1588072796224"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_1_1587497174868",
+      "previous_sibling": "response_2_1587916263441"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Celkem projedete <? $routeResponse.totalDistance ?>."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1586098875350",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1587498024774"
+      },
+      "conditions": "$routeResponse.totalDistance != null",
+      "dialog_node": "response_1_1587497166710",
+      "previous_sibling": "response_10_1587916201935"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Celkem projedete <? $routeResponse.totalDistance ?>. Cesta bude trvat kolem <? $routeResponse.totalTime ?>. Zaplatíte celkem <? $routeResponse.fare ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1586098875350",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1587498024774"
+      },
+      "conditions": "$routeResponse.totalDistance != null && $routeResponse.totalTime != null && $routeResponse.fare != null",
+      "dialog_node": "response_9_1587915476940",
+      "previous_sibling": "node_9_1587498024774"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Celkem projedete <? $routeResponse.totalDistance ?>. Cesta bude trvat kolem <? $routeResponse.totalTime ?>."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1586098875350",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1587498024774"
+      },
+      "conditions": "$routeResponse.totalDistance != null && $routeResponse.totalTime != null",
+      "dialog_node": "response_8_1587497241013",
+      "previous_sibling": "response_9_1587915476940"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Zaplatíte celkem <? $routeResponse.fare ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1586098875350",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1587498024774"
+      },
+      "conditions": "$routeResponse.fare != null",
+      "dialog_node": "response_2_1587916263441",
+      "previous_sibling": "response_10_1587497173493"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Celkem projedete <? $routeResponse.totalDistance ?>. Zaplatíte celkem <? $routeResponse.fare ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1586098875350",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1587498024774"
+      },
+      "conditions": "$routeResponse.totalDistance != null && $routeResponse.fare != null",
+      "dialog_node": "response_4_1587916043905",
+      "previous_sibling": "response_8_1587497241013"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Cesta bude trvat kolem <? $routeResponse.totalTime ?>."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1586098875350",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1587498024774"
+      },
+      "conditions": "$routeResponse.totalTime != null",
+      "dialog_node": "response_10_1587497173493",
+      "previous_sibling": "response_1_1587497166710"
+    },
+    {
+      "type": "standard",
+      "title": "Mapa nebo popis",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Chcete, abych to zobrazil na mapě nebo popsal slovy?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1586098875350",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "dialog_node": "node_9_1587498024774"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Nejprve zadejte svůj email, prosím, abych mohl dohledat informaci o Vašich předchozích výletech a naplánovat trasu rychleji. Pokud ještě nemáte účet - rovnou Vám ho založím."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1588006060444",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1588006060456",
+      "previous_sibling": "handler_5_1588006060456"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1588006060444",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email.literal",
+      "event_name": "input",
+      "dialog_node": "handler_5_1588006060456"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Poslal jsem vám e-mail s detaily vašeho výletu."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1590101896967",
+      "conditions": "$emailResult.response == \"OK\"",
+      "dialog_node": "response_8_1590166854546"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Děkuji!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1588149624009",
+      "conditions": "anything_else",
+      "dialog_node": "response_9_1588149648317"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1588147787977",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1590167384738"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_6_1588148570758",
+      "previous_sibling": "response_3_1588148337418"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Pamatujete si svůj předchozí výlet - <? $user.destination ?>? Mohl bych Vás požádat o zpětnou vazbu?",
+            "options": [
+              {
+                "label": "Jo, klidně",
+                "value": {
+                  "input": {
+                    "text": "Jo, klidně"
+                  }
+                }
+              },
+              {
+                "label": "Nemám čas",
+                "value": {
+                  "input": {
+                    "text": "Nemám čas"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_5_1588147787977",
+      "conditions": "$user.destination != null && $user.feedback == true",
+      "dialog_node": "response_3_1588148337418"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Čím plánujete jet? Autem nebo hromadnou dopravou?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1588073461208",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1588073461221",
+      "previous_sibling": "handler_5_1588073461221"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1588073461208",
+      "context": {
+        "tripType": "@tripType"
+      },
+      "conditions": "@tripType",
+      "event_name": "input",
+      "dialog_node": "handler_5_1588073461221"
+    },
+    {
+      "type": "standard",
+      "title": "Zajímavosti v okolí - vyběr kategorie",
+      "output": {
+        "generic": [
+          {
+            "title": "Vyberte, prosím, jednu z nabízených kategorií",
+            "options": [
+              {
+                "label": "Jídlo a pití",
+                "value": {
+                  "input": {
+                    "text": "Jídlo a pití"
+                  }
+                }
+              },
+              {
+                "label": "Zábava",
+                "value": {
+                  "input": {
+                    "text": "Zábava"
+                  }
+                }
+              },
+              {
+                "label": "Památky a muzea",
+                "value": {
+                  "input": {
+                    "text": "Památky a muzea"
+                  }
+                }
+              },
+              {
+                "label": "Ubytování",
+                "value": {
+                  "input": {
+                    "text": "Ubytování"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1590100785662",
+      "context": {},
+      "conditions": "@interestingPlaceAnswer:ano",
+      "dialog_node": "node_7_1586093729201",
+      "previous_sibling": "node_6_1588145285183"
+    },
+    {
+      "type": "standard",
+      "title": "Zajímavosti v okolí - informace",
+      "parent": "node_4_1590100785662",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "email": "$email",
+            "category": "@category.literal",
+            "coordinates": "<? $placeResponse.responses[0].lat ?>,<? $placeResponse.responses[0].lng ?>",
+            "requestType": "PLACES_API"
+          },
+          "result_variable": "categoryResponse"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@category",
+      "dialog_node": "node_6_1588145285183"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Váš účet byl vytvořen. "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1588005326900",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1588072796224"
+      },
+      "conditions": "$user.status == \"201\" && $user.useHistory == false",
+      "dialog_node": "response_9_1588017100030",
+      "previous_sibling": "response_2_1588016762945"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Chcete použit informaci z předchozího výletu pro planování trasy?",
+            "options": [
+              {
+                "label": "Jo",
+                "value": {
+                  "input": {
+                    "text": "Jo"
+                  }
+                }
+              },
+              {
+                "label": "Ne",
+                "value": {
+                  "input": {
+                    "text": "Ne"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_10_1588005326900",
+      "context": {
+        "tripType": null,
+        "sourcePlace": null
+      },
+      "conditions": "$user.status == \"200\" && $user.useHistory == true",
+      "dialog_node": "response_2_1588016762945",
+      "previous_sibling": "node_5_1588072796224"
+    },
+    {
+      "type": "frame",
+      "title": "Naplánovat trasu",
+      "parent": "node_10_1588005326900",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "email": "$email",
+            "origin": "<? @sourcePlace.groups[2] ?>",
+            "tripType": "$tripType",
+            "useHistory": false,
+            "coordinates": "<? $placeResponse.responses[0].lat ?>,<? $placeResponse.responses[0].lng ?>",
+            "destination": "<? $placeResponse.responses[0].title ?>",
+            "requestType": "ROUTE_API"
+          },
+          "result_variable": "routeResponse"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1586098875350"
+      },
+      "conditions": "@tripAnswer:ne",
+      "dialog_node": "node_5_1588072796224",
+      "previous_sibling": "node_10_1588073209231"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Přihlášení proběhlo úspěšně, ale nemám informaci o předchozích výletech."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1588005326900",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1588072796224"
+      },
+      "conditions": "$user.status == \"200\" && $user.useHistory == false",
+      "dialog_node": "response_6_1588064684687",
+      "previous_sibling": "response_9_1588017100030"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1588005326900",
+      "variable": "$email",
+      "dialog_node": "slot_4_1588006060444",
+      "previous_sibling": "response_6_1588064684687"
+    },
+    {
+      "type": "standard",
+      "title": "Naplánovat trasu",
+      "parent": "node_10_1588005326900",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "email": "$email",
+            "useHistory": true,
+            "coordinates": " <? $placeResponse.responses[0].lat ?>,<? $placeResponse.responses[0].lng ?>",
+            "destination": "<? $placeResponse.responses[0].title ?>",
+            "requestType": "ROUTE_API"
+          },
+          "result_variable": "routeResponse"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1586098875350"
+      },
+      "conditions": "@tripAnswer:ano",
+      "dialog_node": "node_10_1588073209231"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Dobré ráno!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Vítejte",
+      "context": {},
+      "conditions": "now().before('12:00:00')",
+      "dialog_node": "response_4_1586795701038",
+      "previous_sibling": "node_1_1587412183692"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Dobrý večer!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Vítejte",
+      "conditions": "now().before('23:59:59')",
+      "dialog_node": "response_4_1586795956881",
+      "previous_sibling": "response_5_1586795784275"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Dobrý den!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Vítejte",
+      "conditions": "now().before('18:00:00')",
+      "dialog_node": "response_5_1586795784275",
+      "previous_sibling": "response_4_1586795701038"
+    },
+    {
+      "type": "standard",
+      "title": "Informace o chatbotovi",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Jsem Průvodce cestovatele po kulturních památkách České republiky. Dokážu najít doplňkové informace o místě, které plánujete navštívit, rovnou naplánovat tam trasu nebo dohledat zajímavosti v okolí vybrané památky. "
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "Vítejte",
+      "conditions": "",
+      "dialog_node": "node_1_1587412183692"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1586120521132",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1586120521140",
+      "previous_sibling": "handler_8_1586120521140"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1586120521132",
+      "context": {
+        "place": "@place"
+      },
+      "conditions": "@place",
+      "event_name": "input",
+      "dialog_node": "handler_8_1586120521140"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1588072796224",
+      "variable": "$sourcePlace",
+      "dialog_node": "slot_4_1588073498394",
+      "previous_sibling": "slot_9_1588073461208"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1588072796224",
+      "variable": "$tripType",
+      "dialog_node": "slot_9_1588073461208"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "<? $placeResponse.responses[0].title ?> ve městě <? $placeResponse.responses[0].city ?> - skvělá volba! Co byste se chtěli dozvědět o tomto místě?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1586098728604",
+      "conditions": "$placeResponse.responses[0] != null",
+      "dialog_node": "response_4_1587325486426",
+      "previous_sibling": "response_6_1587325487125"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1586098728604",
+      "variable": "$place",
+      "dialog_node": "slot_4_1586120521132",
+      "previous_sibling": "handler_1_1586120520521"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_5_1586098728604",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1586120520521",
+      "previous_sibling": "response_4_1587325486426"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Bohužel, nenašel jsem toto místo."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1586098728604",
+      "conditions": "$placeResponse.responses.size() == 0",
+      "dialog_node": "response_6_1587325487125"
+    },
+    {
+      "type": "standard",
+      "title": "Zpětná vazba - NE",
+      "parent": "node_2_1590100212135",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "email": "$email",
+            "requestType": "FEEDBACK_API",
+            "feedbackStop": true
+          },
+          "result_variable": "feedbackResponse"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1590167384738"
+      },
+      "conditions": "@feedbackAnswer:ne",
+      "dialog_node": "node_2_1588150492718",
+      "previous_sibling": "node_3_1588149170055"
+    },
+    {
+      "type": "standard",
+      "title": "Zpětná vazba - ANO",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Napište Vaši zpětnou vazbu ve formatu \"ZV: text\" (např.: ZV: Bylo to super!)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1590100212135",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@feedbackAnswer:ano",
+      "dialog_node": "node_3_1588149170055",
+      "previous_sibling": "node_2_1588149624009"
+    },
+    {
+      "type": "standard",
+      "title": "Žádost o zpětnou vazbu",
+      "parent": "node_2_1590100212135",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "",
+      "dialog_node": "node_5_1588147787977",
+      "previous_sibling": "node_2_1588150492718"
+    },
+    {
+      "type": "standard",
+      "title": "Zpětná vazba - uložit",
+      "parent": "node_2_1590100212135",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "email": "$user.email",
+            "feedback": "<? @feedback.groups[2] ?>",
+            "feedbackId": "$user.feedbackId",
+            "requestType": "FEEDBACK_API",
+            "feedbackStop": false
+          },
+          "result_variable": "feedbackResponse"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1590167384738"
+      },
+      "conditions": "@feedback",
+      "dialog_node": "node_2_1588149624009"
+    },
+    {
+      "type": "standard",
+      "title": "Naplánovat trasu",
+      "parent": "node_10_1588073209231",
+      "metadata": {
+        "callout": {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "": ""
+          },
+          "result_variable": "routeResponse"
+        },
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "",
+      "dialog_node": "node_10_1586098875350"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $placeResponse.responses[0].addressLabel ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "source": "<? $placeResponse.responses[0].mapPicture ?>",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "<? $placeResponse.responses[0].mapLink ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:address && $placeResponse.responses[0].addressLabel != null",
+      "dialog_node": "response_7_1587402254910",
+      "previous_sibling": "response_8_1587402163000"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "<? $placeResponse.responses[0].webPages ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:webPage && $placeResponse.responses[0].webPages != null",
+      "dialog_node": "response_2_1587402377297",
+      "previous_sibling": "response_7_1587402362376"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Bohužel, nenašel jsem o tom info."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:webPage && $placeResponse.responses[0].webPages == null",
+      "dialog_node": "response_7_1587402362376",
+      "previous_sibling": "response_6_1587402306745"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Bohužel, nenašel jsem o tom info."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:email && $placeResponse.responses[0].emails == null",
+      "dialog_node": "response_10_1587402102400",
+      "previous_sibling": "response_5_1587400061694"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bohužel, nenašel jsem o tom info."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:workingHours && $placeResponse.responses[0].workingTime == null",
+      "dialog_node": "response_2_1587399983110",
+      "previous_sibling": "node_2_1588080733738"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "<? $placeResponse.responses[0].emails ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:email && $placeResponse.responses[0].emails != null",
+      "dialog_node": "response_2_1587402134936",
+      "previous_sibling": "response_10_1587402102400"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "<? $placeResponse.responses[0].phones ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:phone && $placeResponse.responses[0].phones != null",
+      "dialog_node": "response_6_1587402306745",
+      "previous_sibling": "response_2_1587402284121"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Bohužel, nenašel jsem o tom info."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:phone && $placeResponse.responses[0].phones == null",
+      "dialog_node": "response_2_1587402284121",
+      "previous_sibling": "response_7_1587402254910"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $placeResponse.responses[0].workingTime ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:workingHours && $placeResponse.responses[0].workingTime != 0",
+      "dialog_node": "response_5_1587400061694",
+      "previous_sibling": "response_2_1587399983110"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Bohužel, nenašel jsem o tom info."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_8_1587399198728",
+      "conditions": "@info:address && $placeResponse.responses[0].addressLabel == null",
+      "dialog_node": "response_8_1587402163000",
+      "previous_sibling": "response_2_1587402134936"
+    },
+    {
+      "type": "standard",
+      "title": "Něco dalšího",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Zajímá Vás něco dalšího o tomto místě?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1587399198728",
+      "dialog_node": "node_2_1588080733738"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Odkud plánujete jet? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Myslím na bezpečnost Vašeho soukromí a proto nechci po Vás přesnou adresu. Bude mi stačit informace ve formatu \"Z Dejvic\"."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_4_1588073498394",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1588073498397",
+      "previous_sibling": "handler_2_1588073498397"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1588073498394",
+      "context": {
+        "sourcePlace": "@sourcePlace.literal"
+      },
+      "conditions": "@sourcePlace.literal",
+      "event_name": "input",
+      "dialog_node": "handler_2_1588073498397"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Jakou další památku plánujete navštívit během Vašeho výletu?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1588192944343",
+      "conditions": "@endConversation:ano",
+      "dialog_node": "response_10_1588193020205",
+      "previous_sibling": "response_5_1588192961303"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Pokud něco - jsem tady."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1588192944343",
+      "conditions": "@endConversation:ne",
+      "dialog_node": "response_5_1588192961303"
+    },
+    {
+      "type": "standard",
+      "title": "Získání detailů výletu e-mailem",
+      "parent": "node_6_1590102418893",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "email": "$email",
+            "requestType": "EMAIL_API"
+          },
+          "result_variable": "emailResult"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1588147787977"
+      },
+      "conditions": "@interestingPlaceAnswer:ne",
+      "dialog_node": "node_7_1590101896967"
+    },
+    {
+      "type": "standard",
+      "title": "Detaily trasy",
+      "parent": "node_10_1588074716336",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1588144186786"
+      },
+      "conditions": "@TripView",
+      "dialog_node": "node_1_1587500220498",
+      "previous_sibling": "node_10_1588005326900"
+    },
+    {
+      "type": "frame",
+      "title": "Přihlášení",
+      "parent": "node_10_1588074716336",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "email": "$email",
+            "requestType": "USER_GET_API"
+          },
+          "result_variable": "user"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#get",
+      "dialog_node": "node_10_1588005326900"
+    },
+    {
+      "type": "folder",
+      "title": "Naplánování trasy",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_10_1588074716336",
+      "previous_sibling": "node_3_1590100582562"
+    },
+    {
+      "type": "standard",
+      "title": "V ostatních případech",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Nerozumím. Zkuste přeformulovat váš dotaz."
+              },
+              {
+                "text": "Mohl byste se zeptat ještě jednou a trochu jinak? Neporozuměl jsem."
+              },
+              {
+                "text": "Zcela jsem neporozuměl tomu, na co se ptáte."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "V ostatních případech",
+      "previous_sibling": "node_2_1590100027353",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "folder",
+      "title": "Získání informací o místě",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1590100582562",
+      "previous_sibling": "node_9_1588076848949"
+    },
+    {
+      "type": "folder",
+      "title": "Získání detailů výletu e-mailem",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1590102418893",
+      "previous_sibling": "node_4_1590100785662"
+    },
+    {
+      "type": "standard",
+      "title": "Nabídnout pomoc",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Dovolte mi Vám pomoct. Jakou památku plánujete navštívit během Vašeho výletu?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#greeting",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1588076848949",
+      "previous_sibling": "Vítejte"
+    },
+    {
+      "type": "folder",
+      "title": "Ukončení konverzace",
+      "dialog_node": "node_2_1590100027353",
+      "previous_sibling": "node_2_1590100212135"
+    },
+    {
+      "type": "folder",
+      "title": "Zpětná vazba",
+      "dialog_node": "node_2_1590100212135",
+      "previous_sibling": "node_6_1590102418893"
+    },
+    {
+      "type": "folder",
+      "title": "Nalezení zajímavostí v okolí",
+      "dialog_node": "node_4_1590100785662",
+      "previous_sibling": "node_10_1588074716336"
+    },
+    {
+      "type": "standard",
+      "title": "Vítejte",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1587412183692"
+      },
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "Vítejte"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "Ano, chci"
+    },
+    {
+      "text": "Jídlo a pití"
+    },
+    {
+      "text": "kontakt na nej"
+    },
+    {
+      "text": "Ne"
+    },
+    {
+      "text": "Nemám čas"
+    },
+    {
+      "text": "Nemám o to zájem"
+    },
+    {
+      "text": "nevis nahodou pracovni dobu"
+    },
+    {
+      "text": "No"
+    },
+    {
+      "text": "oteviraci doba"
+    },
+    {
+      "text": "Památky a muzea"
+    },
+    {
+      "text": "popis"
+    },
+    {
+      "text": "Určitě to chci"
+    },
+    {
+      "text": "web"
+    },
+    {
+      "text": "webova stránka"
+    },
+    {
+      "text": "Z Prahy"
+    },
+    {
+      "text": "ZV: bylo to dobre"
+    },
+    {
+      "text": "ZV: Bylo to fajn!"
+    }
+  ],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Vyberte prosím:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nic z výše uvedeného"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Vyberte prosím:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "Travel guide",
+  "language": "cs",
+  "description": ""
+}
